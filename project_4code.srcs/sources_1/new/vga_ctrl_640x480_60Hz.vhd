@@ -73,7 +73,6 @@ port(
    rst         : in std_logic;
    clk   : in std_logic;
    rgb_in     : in std_logic_vector(11 downto 0);
-	
    HS          : out std_logic;
    VS          : out std_logic;
    hcount      : out std_logic_vector(10 downto 0);

@@ -42,12 +42,12 @@ entity display_34 is
 		dh:   integer := 100
 	);
 	Port (
-			value:  in std_logic_vector(5 downto 0);
-			hcount: in std_logic_vector(10 downto 0);
-			vcount: in std_logic_vector(10 downto 0);
-			paint:  out std_logic;
-		    posx: in integer;
-		    posy: in integer
+			value:  in    std_logic_vector(5 downto 0);
+			hcount: in    std_logic_vector(10 downto 0);
+			vcount: in    std_logic_vector(10 downto 0);
+			posx:   in    integer;
+		    posy:   in    integer;
+            paint:  out   std_logic
 			
 		);
 
@@ -327,9 +327,9 @@ begin
             sd5d:= sd5 -adiag;
             sd5u:= sd5 +adiag;
 
-            if(    segments(3) ='1' and hcount >= sd4d and hcount <= sd4u) then
+            if ( segments(3)= '1' and hcount >= sd4d  and hcount <= sd4u) then
                 a2 :='1';
-            elsif(  segments(4)='1' and hcount >= sd5d and hcount <= sd5u) then
+            elsif (  segments(4) = '1' and hcount >= sd5d and hcount <= sd5u) then
                 a2 :='1';
             end if;
 

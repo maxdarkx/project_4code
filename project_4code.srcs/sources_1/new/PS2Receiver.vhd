@@ -11,24 +11,26 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 library UNISIM;
 use UNISIM.VComponents.all;
 entity PS2Receiver is
-port( clk: in std_logic;
-      kclk: in std_logic;
-      kdata: in std_logic;
-      keycode: out std_logic_vector(7 downto 0);
-       oflag:  out std_logic);
+port( clk:      in  std_logic;
+      kclk:     in  std_logic;
+      kdata:    in  std_logic;
+      keycode:  out std_logic_vector(7 downto 0);
+      oflag:    out std_logic);
       
 end entity;
 
 architecture behave of PS2Receiver is
 
-signal kclkf: std_logic;
-signal kdataf: std_logic;
-signal datacur: std_logic_vector(7 downto 0);
-signal dataprev: std_logic_vector(7 downto 0);
-signal cnt: std_logic_vector(3 downto 0):= "0000" ;
-signal flag: std_logic;
-signal pflag: std_logic;
-signal contar: integer:=0;
+signal kclkf:     std_logic;
+signal kdataf:    std_logic;
+signal datacur:   std_logic_vector(7 downto 0);
+signal dataprev:  std_logic_vector(7 downto 0);
+signal cnt:       std_logic_vector(3 downto 0):= "0000" ;
+signal flag:      std_logic;
+signal pflag:     std_logic;
+signal contar:    integer:=0;
+
+
 -- componente debouncing
 component debouncing 
  generic( COUNT_MAX: integer := 255; 
