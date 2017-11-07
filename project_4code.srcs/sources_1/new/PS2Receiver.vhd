@@ -98,7 +98,6 @@ process(clk)
     if(falling_edge(clk)) then
         if(flag = '1' and  pflag = '0') then
 --           keycode <= dataprev & datacur;
-            
              keycode <= datacur;
              oflag <= '1';
              dataprev <= datacur;
