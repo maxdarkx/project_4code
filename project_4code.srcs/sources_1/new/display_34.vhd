@@ -42,7 +42,7 @@ entity display_34 is
 		dh:   integer := 100
 	);
 	Port (
-			value:  in    std_logic_vector(5 downto 0);
+			value:  in    std_logic_vector(7 downto 0);
 			hcount: in    std_logic_vector(10 downto 0);
 			vcount: in    std_logic_vector(10 downto 0);
 			posx:   in    integer;
@@ -66,7 +66,7 @@ architecture Behavioral of display_34 is
     
 	component segment_decoder_34 is
 		port (
-			input : in STD_LOGIC_VECTOR(5 downto 0);
+			input : in STD_LOGIC_VECTOR(7 downto 0);
             output : out STD_LOGIC_VECTOR(33 downto 0)
 		);
 	end component segment_decoder_34;

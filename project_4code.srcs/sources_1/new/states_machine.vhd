@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -35,34 +37,35 @@ entity states_machine is
 generic
 (
 	--liss: code "45","45","16","45";
-	signal user11: std_logic_vector(7 downto 0):="01000101";
-	signal user12: std_logic_vector(7 downto 0):="01000101";
-	signal user13: std_logic_vector(7 downto 0):="00010110";
-	signal user14: std_logic_vector(7 downto 0):="01000101";
+	constant user11: std_logic_vector(7 downto 0):="01000101";
+	constant user12: std_logic_vector(7 downto 0):="01000101";
+	constant user13: std_logic_vector(7 downto 0):="00010110";
+	constant user14: std_logic_vector(7 downto 0):="01000101";
 
 	--nili: code "45","16","45","45";
-	signal user21: std_logic_vector(7 downto 0):="01000101";
-	signal user22: std_logic_vector(7 downto 0):="00010110";
-	signal user23: std_logic_vector(7 downto 0):="01000101";
-	signal user24: std_logic_vector(7 downto 0):="01000101";
+	constant user21: std_logic_vector(7 downto 0):="01000101";
+	constant user22: std_logic_vector(7 downto 0):="00010110";
+	constant user23: std_logic_vector(7 downto 0):="01000101";
+	constant user24: std_logic_vector(7 downto 0):="01000101";
 
 	--cedula 1: 1017131966, code 4 finales: "16","46","36","36";
-	signal code11: std_logic_vector(7 downto 0):="00010110";
-	signal code12: std_logic_vector(7 downto 0):="01000110";
-	signal code13: std_logic_vector(7 downto 0):="00110110";
-	signal code14: std_logic_vector(7 downto 0):="00110110";
+	constant code11: std_logic_vector(7 downto 0):="00010110";
+	constant code12: std_logic_vector(7 downto 0):="01000110";
+	constant code13: std_logic_vector(7 downto 0):="00110110";
+	constant code14: std_logic_vector(7 downto 0):="00110110";
 
 	--cedula 2: 1036662012, code 4 finales: "1E","45","16","1E";
-	signal code21: std_logic_vector(7 downto 0):="00011110";
-	signal code22: std_logic_vector(7 downto 0):="01000101";
-	signal code23: std_logic_vector(7 downto 0):="00010110";
-	signal code24: std_logic_vector(7 downto 0):="00011110"
+	constant code21: std_logic_vector(7 downto 0):="00011110";
+	constant code22: std_logic_vector(7 downto 0):="01000101";
+	constant code23: std_logic_vector(7 downto 0):="00010110";
+	constant code24: std_logic_vector(7 downto 0):="00011110"
 );
 Port 
 (
+	clk:		in 	std_logic;
 	keycode:    in 	std_logic_vector(7 downto 0);
 	flag_x:		in 	std_logic;
-	rst: 		in std_logic;
+	rst: 		in 	std_logic;
 	hcount:		in 	std_logic_vector(10 downto 0);
 	vcount:		in 	std_logic_vector(10 downto 0);
 	value:		out std_logic_vector(7 downto 0);
@@ -92,11 +95,11 @@ architecture Behavioral of states_machine is
 	signal data11,data12,data13,data14 :std_logic_vector(7 downto 0):=RESET_DATA;
 	signal data21,data22,data23,data24 :std_logic_vector(7 downto 0):=RESET_DATA;
 	signal data_icon1,data_icon2: std_logic_vector(7 downto 0):=RESET_DATA;
-	type state_code is (s0,s1,s2,s3,s4,s5,s6,s7,s8,s9);
+	type state_code is (s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,sx);
 	signal state_p,state_f: state_code:= s0;
 begin
 
-	print: process
+	print: process(hcount)
 		variable px1,px10,px11,px12,px13,px101: integer:=0;
 		variable px2,px20,px21,px22,px23,px201: integer:=0;
 		variable py1,py2,py3: integer;
@@ -122,9 +125,11 @@ begin
 			if hcount>px10 and hcount<px11 then
 				posx<=px10;
 				value<=data11;
+
 			elsif hcount>px11 and hcount<px12 then
 				posx<=px11;
 				value<=data12;
+
 			elsif hcount>px12 and hcount<px13 then
 				posx<=px12;
 				value<=data13;

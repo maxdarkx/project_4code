@@ -18,7 +18,7 @@ entity machine is
            rst:       in  std_logic;
            PS2Data :  in  STD_LOGIC;
            PS2Clk :   in  STD_LOGIC;
-           leds :     out STD_LOGIC_VECTOR (7 downto 0);
+           led :      out STD_LOGIC_VECTOR (7 downto 0);
            hs:        out std_logic;
            vs:        out std_logic;
            rgb:       out std_logic_vector(11 downto 0)
@@ -33,12 +33,13 @@ port(
       kclk:     in  std_logic;
       kdata:    in  std_logic;
       keycode:  out std_logic_vector(7 downto 0);
-      oflag:    out std_logic);
+      flag_x:    out std_logic
+    );
 end component;
 
 component display_34
 port(
-      value:  in  std_logic_vector(5 downto 0);
+      value:  in  std_logic_vector(7 downto 0);
       hcount: in  std_logic_vector(10 downto 0);
       vcount: in  std_logic_vector(10 downto 0);
       paint:  out std_logic;
@@ -61,17 +62,34 @@ port
   );
 end component;
 
+component states_machine
+Port 
+(
+  clk:      in  STD_LOGIC;
+  keycode:  in  std_logic_vector(7 downto 0);
+  flag_x:   in  std_logic;
+  rst:      in  std_logic;
+  hcount:   in  std_logic_vector(10 downto 0);
+  vcount:   in  std_logic_vector(10 downto 0);
+  value:    out std_logic_vector(7 downto 0);
+  posx:     out integer;
+  posy:     out integer
+);
+end component;
 
 
-signal Tleds : std_logic_vector(7 downto 0);
+signal Tled :         std_logic_vector(7 downto 0);
 --signal Iv: std_logic := '0';
-signal oflag : std_logic;
-signal clk50Mhz : std_logic;
-signal rgb_aux: std_logic_vector(11 downto 0);
+signal flag_x :       std_logic;
+signal clk50Mhz :     std_logic;
+signal rgb_aux:       std_logic_vector(11 downto 0);
 signal hcount,vcount: std_logic_vector (10 downto 0 );
-signal paint0: std_logic;
-signal value: std_logic_vector(5 downto 0);
-signal px,py: integer;
+signal paint0:        std_logic;
+signal px,py:         integer;
+signal val :          std_logic_vector(7 downto 0);
+signal cnt :          integer:=0;
+signal clk1hz:        std_logic:='0';
+signal rst_r:         std_logic:='0';
 
 begin
 
@@ -83,10 +101,32 @@ begin
   end if;
 end process;
 
+clk_1hz: process(clk)
+begin
+  if (clk'event and clk='1') then
+    cnt<=cnt+1;
+  end if;
+  if cnt=50000000 then
+    clk1hz<=not clk1hz;
+  end if;
+end process;
+
+rst_real:process (rst)
+begin
+  if(clk1hz'event and clk1hz='1') then
+    if(rst='1') then
+      rst_r<='1';
+    else
+      rst_r<='0';
+    end if;
+  end if;
+end process;
+ 
+
 vgacontroller:vga_ctrl_640x480_60hz 
 port map
 (
-   rst      =>  rst,
+   rst      =>  rst_r,
    clk      =>  clk50Mhz,
    rgb_in   =>  rgb_aux,
    HS       =>  hs,
@@ -102,12 +142,24 @@ keboardin: PS2Receiver
 		clk     => clk50Mhz,
 		kclk    => PS2Clk,
 		kdata   => PS2Data,
-		keycode => Tleds,
-    oflag   => oflag
+		keycode => Tled,
+    flag_x   => flag_x
 );
---falta la maquina de estados____________________
 
---_________________________________________________
+states_machine1:states_machine
+Port map
+(
+  clk       => clk,
+  keycode   => Tled,
+  flag_x    => flag_x,
+  rst       => rst_r,
+  hcount    => hcount,
+  vcount    => vcount,
+  value     => val,
+  posx      => px,
+  posy      => py
+);
+
 display: display_34
 port map
 (
@@ -116,20 +168,20 @@ port map
   vcount  =>  vcount,
   posx    =>  px,
   posy    =>  py,
-  paint   =>  paint0,      
+  paint   =>  paint0      
 );
 
-ledsout: process(clk)
+ledout: process(clk)
 begin  
   if (clk'event and clk = '1') then
-     if ( oflag =  '1' ) then
-        leds <= Tleds;
+     if ( flag_x =  '1' ) then
+        led <= Tled;
      end if;
   end if; 
 end process;
   
 
-color: process
+color: process(paint0)
 begin
   if paint0='1' then
     rgb_aux<="111100000000";
