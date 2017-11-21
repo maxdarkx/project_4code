@@ -36,13 +36,13 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 entity states_machine is
 generic
 (
-	--liss: code "45","45","16","45";
+	--liss: code "45","45","16","45"; 0010
 	constant user11: std_logic_vector(7 downto 0):="01000101";
 	constant user12: std_logic_vector(7 downto 0):="01000101";
 	constant user13: std_logic_vector(7 downto 0):="00010110";
 	constant user14: std_logic_vector(7 downto 0):="01000101";
 
-	--nili: code "45","16","45","45";
+	--nili: code "45","16","45","45"; 0100
 	constant user21: std_logic_vector(7 downto 0):="01000101";
 	constant user22: std_logic_vector(7 downto 0):="00010110";
 	constant user23: std_logic_vector(7 downto 0):="01000101";
@@ -63,6 +63,7 @@ generic
 Port 
 (
 	clk:		in 	std_logic;
+	clk_1:		in  std_logic;
 	keycode:    in 	std_logic_vector(7 downto 0);
 	flag_x:		in 	std_logic;
 	rst: 		in 	std_logic;
@@ -70,7 +71,8 @@ Port
 	vcount:		in 	std_logic_vector(10 downto 0);
 	value:		out std_logic_vector(7 downto 0);
 	posx:  		out	integer;
-	posy:   	out integer
+	posy:   	out integer;
+	led:	    out std_logic_vector(7 downto 0)
 );
 end states_machine;
 
@@ -91,12 +93,14 @@ architecture Behavioral of states_machine is
 	constant EHU1: integer := cc1*(dl+esh) ; --Espacio horizontal total utilizado fila 1 y 2
 	
 	constant RESET_DATA: std_logic_vector(7 downto 0):=(others=>'0');
-	constant code_F0: std_logic_vector(7 downto 0):="11110000";
+	constant code_F0: std_logic_vector(7 downto 0):="11110000"; --"F0"
+	constant code_E0: std_logic_vector(7 downto 0):="11100000";	--"E0"
+	constant code_R:  std_logic_vector(7 downto 0):="00101101";	--"R= 2D"
 	signal data11,data12,data13,data14 :std_logic_vector(7 downto 0):=RESET_DATA;
 	signal data21,data22,data23,data24 :std_logic_vector(7 downto 0):=RESET_DATA;
-	signal data_icon1,data_icon2: std_logic_vector(7 downto 0):=RESET_DATA;
-	type state_code is (s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,sx);
+	type state_code is (s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19);
 	signal state_p,state_f: state_code:= s0;
+	constant c_max:integer:=5000000;
 begin
 
 	print: process(hcount)
@@ -163,105 +167,157 @@ begin
 		end if;
 	end process;
 
-	next_state: process(clk)
+	next_state: process(clk_1)
 	begin
-		if(clk'event and clk='1') then
-			if(rst = '1')then
-				state_p<=s0;
-			else
-				state_p<=state_f;
-			end if;
+		if rst='1' then
+			state_p<=s0;
+		elsif(clk_1'event and clk_1='1') then
+			state_p<=state_f;
 		end if;
 
 	end process;
 
 
-	finite_state_f_machine: process(state_p,flag_x)
+	--keyboard_receiver: process(clk_1)
+	--begin
+	--	if clk_1'event and clk_1='1' then
+	--		case state_p is
+	--			when s1|s3|s5|s7|s10|s12|s14|s16=>
+	--				if(flag_x='1' and c=0) then
+	--			  		c<=c+1;	
+	--			  	else
+	--			  		c<=0;
+	--			  	end if;
+	--			  when others=>
+	--			  	c<=0;
+	--	  	end case;
+	--	end if;
+	--end process;
+
+
+
+
+	finite_state_f_machine: process(flag_x)
 	begin
-		if keycode /= code_F0 then
-
-			case state_p is
-				when s0=>
-					if(flag_x='1') then
-						data11<=keycode;
+			state_f<=state_p;
+			if keycode/= code_F0 and keycode/= code_E0 then
+				case state_p is
+					when s0=>
 						state_f<=s1;
-					end if;
-
-				when s1=>
-					if(flag_x='1') then
-						data12<=keycode;
-						state_f<=s2;
-					end if;
-
-				when s2=>
-					if(flag_x='1') then
-						data13<=keycode;
-						state_f<=s3;
-					end if;
-
-				when s3=>
-					if(flag_x='1') then
-						data14<=keycode;
-						state_f<=s4;
-					end if;
-
-				when s4=>
-					if(user11=data11 and user12=data12 and user13=data13 and user14=data14) then
-						state_f<=s5;
-					elsif (user21=data11 and user22=data12 and user23=data13 and user24=data14) then
-						state_f<=s5;
-					else
+						led<="00000000";
+					when s1=>
+							state_f<=s2;
+							led<="00000001";
+					when s2=>
+							state_f<=s3;
+							led<="00000010";
+					when s3=>
+							state_f<=s4;
+							led<="00000011";
+					when s4=>
+							state_f<=s5;
+							led<="00000100";
+					when s5=>
+							state_f<=s6;
+							led<="00000101";
+					when s6=>
+							state_f<=s7;
+							led<="00000110";
+					when s7=>
+							state_f<=s8;
+							led<="00000111";
+					when s8=>
+							state_f<=s9;
+							led<="00001000";
+						
+					when s9=>
+						if(user11=data11 and user12=data12 and user13=data13 and user14=data14) then
+							state_f<=s10;
+						elsif (user21=data11 and user22=data12 and user23=data13 and user24=data14) then
+							state_f<=s10;
+						else
+							state_f<=s0;
+						end if;
+						led<="00001001";
+					when s10=>
+						if(flag_x='1' and keycode /= code_F0) then
+							state_f<=s11;
+						end if;
+						led<="00001010";
+					when s11=>
+						state_f<=s12;
+						led<="00001011";
+					when s12=>
+						if(flag_x='1' and keycode /= code_F0) then
+							state_f<=s13;
+						end if;
+						led<="00001100";
+					when s13=>
+						state_f<=s14;
+						led<="00001101";
+					when s14=>
+						if(flag_x='1'and keycode /= code_F0 ) then
+							state_f<=s15;
+						end if;
+						led<="00001110";
+					when s15=>
+						state_f<=s16;
+						led<="00001111";
+					when s16=>
+						if(flag_x='1'and keycode /= code_F0 ) then
+							state_f<=s17;
+						end if;
+						led<="00010000";
+					when s17=>
+						state_f<=s18;
+						led<="00010001";
+					when s18=>
+						if(user11=data11 and user12=data12 and user13=data13 and user14=data14) then
+							state_f<=s19;
+						elsif (user21=data11 and user22=data12 and user23=data13 and user24=data14) then
+							state_f<=s19;
+						else
+							state_f<=s0;
+						end if;
+						led<="00010010";
+					when others=>
 						state_f<=s0;
-						data11<=RESET_DATA;
-						data12<=RESET_DATA;
-						data13<=RESET_DATA;
-						data14<=RESET_DATA;
-					end if;
+						led<="11110000";
+				end case;
+			end if;
+	end process;
 
-				when s5=>
-					if(flag_x='1') then
-						data21<=keycode;
-						state_f<=s6;
-					end if;
-				when s6=>
-					if(flag_x='1') then
-						data22<=keycode;
-						state_f<=s7;
-					end if;
-				when s7=>
-					if(flag_x='1') then
-						data23<=keycode;
-						state_f<=s8;
-					end if;
-				when s8=>
-					if(flag_x='1') then
-						data24<=keycode;
-						state_f<=s9;
-					end if;
-				when s9=>
-					if(code11=data21 and code12=data22 and code13=data23 and code14=data24) then
-						state_f<=sx;
-					elsif (code21=data21 and code22=data22 and code23=data23 and code24=data24) then
-						state_f<=sx;
-					else
-						state_f<=s0;
+	write_data: process(state_p)
+	begin
+		case state_p is
+			when s0=>
+				data11<=RESET_DATA;
+				data12<=RESET_DATA;
+				data13<=RESET_DATA;
+				data14<=RESET_DATA;
 
-						--resetea todos los datos si hay algun error y regresa al estado inicial
-						data11<=RESET_DATA;
-						data12<=RESET_DATA;
-						data13<=RESET_DATA;
-						data14<=RESET_DATA;
-
-						data21<=RESET_DATA;
-						data22<=RESET_DATA;
-						data23<=RESET_DATA;
-						data24<=RESET_DATA;
-					end if;
-
-				when others =>
-					state_f<=s0;
-			end case;
-		end if;
+				data21<=RESET_DATA;
+				data22<=RESET_DATA;
+				data23<=RESET_DATA;
+				data24<=RESET_DATA;	
+			when s2=>
+				data11<=keycode;
+			when s4=>
+				data12<=keycode;
+			when s6=>
+				data13<=keycode;
+			when s8=>
+				data14<=keycode;
+			when s11=>
+				data21<=keycode;
+			when s13=>
+				data22<=keycode;
+			when s15=>
+				data23<=keycode;
+			when s17=>
+				data24<=keycode;
+			when others=>
+		end case;
 	end process;
 		
 end Behavioral;

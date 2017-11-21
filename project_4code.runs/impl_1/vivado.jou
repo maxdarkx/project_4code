@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Wed Nov  8 18:29:48 2017
-# Process ID: 816
+# Start of session at: Fri Nov 17 20:11:23 2017
+# Process ID: 11908
 # Current directory: C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.runs/impl_1
 # Command line: vivado.exe -log machine.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source machine.tcl -notrace
 # Log file: C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.runs/impl_1/machine.vdi

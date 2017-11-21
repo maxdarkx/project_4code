@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Wed Nov  8 18:29:15 2017
+| Date         : Fri Nov 17 20:13:50 2017
 | Host         : KAT-B320 running 64-bit major release  (build 9200)
 | Command      : report_drc -file machine_drc_routed.rpt -pb machine_drc_routed.pb -rpx machine_drc_routed.rpx
 | Design       : machine
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 12
+             Violations found: 11
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDRC-153 | Warning  | Gated clock check                                   | 11         |
+| PDRC-153 | Warning  | Gated clock check                                   | 10         |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -49,57 +49,52 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net states_machine1/FSM_sequential_state_f_reg[3]_i_2_n_0 is a gated clock net sourced by a combinational pin states_machine1/FSM_sequential_state_f_reg[3]_i_2/O, cell states_machine1/FSM_sequential_state_f_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net states_machine1/data11_reg[7]_i_2_n_2 is a gated clock net sourced by a combinational pin states_machine1/data11_reg[7]_i_2/O, cell states_machine1/data11_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net states_machine1/data11_reg[7]_i_1_n_0 is a gated clock net sourced by a combinational pin states_machine1/data11_reg[7]_i_1/O, cell states_machine1/data11_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net states_machine1/data12_reg[7]_i_2_n_2 is a gated clock net sourced by a combinational pin states_machine1/data12_reg[7]_i_2/O, cell states_machine1/data12_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net states_machine1/data12_reg[7]_i_1_n_0 is a gated clock net sourced by a combinational pin states_machine1/data12_reg[7]_i_1/O, cell states_machine1/data12_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net states_machine1/data13_reg[7]_i_1_n_2 is a gated clock net sourced by a combinational pin states_machine1/data13_reg[7]_i_1/O, cell states_machine1/data13_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net states_machine1/data13_reg[7]_i_1_n_0 is a gated clock net sourced by a combinational pin states_machine1/data13_reg[7]_i_1/O, cell states_machine1/data13_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net states_machine1/data14_reg[7]_i_2_n_2 is a gated clock net sourced by a combinational pin states_machine1/data14_reg[7]_i_2/O, cell states_machine1/data14_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net states_machine1/data14_reg[7]_i_2_n_0 is a gated clock net sourced by a combinational pin states_machine1/data14_reg[7]_i_2/O, cell states_machine1/data14_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net states_machine1/data21_reg[7]_i_1_n_2 is a gated clock net sourced by a combinational pin states_machine1/data21_reg[7]_i_1/O, cell states_machine1/data21_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net states_machine1/data21_reg[7]_i_1_n_0 is a gated clock net sourced by a combinational pin states_machine1/data21_reg[7]_i_1/O, cell states_machine1/data21_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net states_machine1/data22_reg[7]_i_1_n_2 is a gated clock net sourced by a combinational pin states_machine1/data22_reg[7]_i_1/O, cell states_machine1/data22_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
 Gated clock check  
-Net states_machine1/data22_reg[7]_i_1_n_0 is a gated clock net sourced by a combinational pin states_machine1/data22_reg[7]_i_1/O, cell states_machine1/data22_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net states_machine1/data23_reg[7]_i_1_n_2 is a gated clock net sourced by a combinational pin states_machine1/data23_reg[7]_i_1/O, cell states_machine1/data23_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net states_machine1/data23_reg[7]_i_2_n_0 is a gated clock net sourced by a combinational pin states_machine1/data23_reg[7]_i_2/O, cell states_machine1/data23_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net states_machine1/data24_reg[7]_i_2_n_2 is a gated clock net sourced by a combinational pin states_machine1/data24_reg[7]_i_2/O, cell states_machine1/data24_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net states_machine1/data24_reg[7]_i_2_n_0 is a gated clock net sourced by a combinational pin states_machine1/data24_reg[7]_i_2/O, cell states_machine1/data24_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net vgacontroller/posy018_out is a gated clock net sourced by a combinational pin vgacontroller/posy_reg[6]_i_1/O, cell vgacontroller/posy_reg[6]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net vgacontroller/E[0] is a gated clock net sourced by a combinational pin vgacontroller/value_reg[7]_i_2/O, cell vgacontroller/value_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#11 Warning
-Gated clock check  
-Net vgacontroller/posy028_out is a gated clock net sourced by a combinational pin vgacontroller/posy_reg[6]_i_1/O, cell vgacontroller/posy_reg[6]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net vgacontroller/rgb_out_reg[7]_443[0] is a gated clock net sourced by a combinational pin vgacontroller/value_reg[7]_i_2/O, cell vgacontroller/value_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

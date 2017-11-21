@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Wed Nov  8 18:29:28 2017
+| Date             : Fri Nov 17 20:14:06 2017
 | Host             : KAT-B320 running 64-bit major release  (build 9200)
 | Command          : report_power -file machine_power_routed.rpt -pb machine_power_summary_routed.pb -rpx machine_power_routed.rpx
 | Design           : machine
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 0.426 |
-| Dynamic (W)              | 0.354 |
-| Device Static (W)        | 0.072 |
+| Total On-Chip Power (W)  | 0.446 |
+| Dynamic (W)              | 0.373 |
+| Device Static (W)        | 0.073 |
 | Effective TJA (C/W)      | 5.0   |
-| Max Ambient (C)          | 82.9  |
-| Junction Temperature (C) | 27.1  |
+| Max Ambient (C)          | 82.8  |
+| Junction Temperature (C) | 27.2  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -50,17 +50,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.185 |    18327 |       --- |             --- |
-|   LUT as Logic |     0.159 |    13376 |     20800 |           64.31 |
-|   CARRY4       |     0.026 |     3816 |      8150 |           46.82 |
-|   Register     |    <0.001 |      197 |     41600 |            0.47 |
-|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   F7/F8 Muxes  |    <0.001 |        2 |     32600 |           <0.01 |
+| Slice Logic    |     0.193 |    18070 |       --- |             --- |
+|   LUT as Logic |     0.166 |    13229 |     20800 |           63.60 |
+|   CARRY4       |     0.026 |     3764 |      8150 |           46.18 |
+|   Register     |    <0.001 |      194 |     41600 |            0.47 |
+|   BUFG         |    <0.001 |        2 |        32 |            6.25 |
+|   F7/F8 Muxes  |    <0.001 |       14 |     32600 |            0.04 |
 |   Others       |     0.000 |       23 |       --- |             --- |
-| Signals        |     0.167 |    16655 |       --- |             --- |
-| I/O            |    <0.001 |       26 |       106 |           24.53 |
-| Static Power   |     0.072 |          |           |                 |
-| Total          |     0.426 |          |           |                 |
+| Signals        |     0.173 |    16427 |       --- |             --- |
+| I/O            |     0.006 |       34 |       106 |           32.08 |
+| Static Power   |     0.073 |          |           |                 |
+| Total          |     0.446 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,9 +70,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.363 |       0.353 |      0.010 |
+| Vccint    |       1.000 |     0.377 |       0.367 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -139,11 +139,11 @@ Table of Contents
 +-------------------+-----------+
 | Name              | Power (W) |
 +-------------------+-----------+
-| machine           |     0.354 |
+| machine           |     0.373 |
 |   keboardin       |    <0.001 |
 |     deb2          |    <0.001 |
-|   states_machine1 |     0.330 |
-|   vgacontroller   |     0.012 |
+|   states_machine1 |     0.346 |
+|   vgacontroller   |     0.011 |
 +-------------------+-----------+
 
 

@@ -1,0 +1,12 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/PS2Receiver.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PS2Receiver
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/display_34.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity display_34
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity machine
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/segment_decoder_34.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity segment_decoder_34
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity states_machine
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sim_1/new/machine_sim.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity machine_sim

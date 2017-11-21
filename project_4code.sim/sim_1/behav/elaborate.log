@@ -1,0 +1,23 @@
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 17bef54669c24bcd9a090762740e9d64 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot machine_sim_behav xil_defaultlib.machine_sim -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling package ieee.numeric_std
+Compiling architecture behave of entity xil_defaultlib.PS2Receiver [ps2receiver_default]
+Compiling architecture behavioral of entity xil_defaultlib.states_machine [states_machine_default]
+Compiling architecture behavioral of entity xil_defaultlib.segment_decoder_34 [segment_decoder_34_default]
+Compiling architecture behavioral of entity xil_defaultlib.display_34 [display_34_default]
+Compiling architecture behavioral of entity xil_defaultlib.machine [machine_default]
+Compiling architecture behavioral of entity xil_defaultlib.machine_sim
+Built simulation snapshot machine_sim_behav

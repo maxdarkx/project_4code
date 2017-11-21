@@ -22,14 +22,14 @@ end entity;
 
 architecture behave of PS2Receiver is
 
-signal kclkf:     std_logic;
-signal kdataf:    std_logic;
-signal datacur:   std_logic_vector(7 downto 0);
+signal kclkf:     std_logic:='0';
+signal kdataf:    std_logic:='0';
+signal datacur:   std_logic_vector(7 downto 0):="00000000";
 --signal dataprev:  std_logic_vector(7 downto 0);
 signal cnt:       std_logic_vector(3 downto 0):= "0000" ;
 signal flag:      std_logic:='0';
-signal pflag:     std_logic;
-signal contar:    std_logic :='0';
+signal pflag:     std_logic:='0';
+signal contar:    std_logic_vector(1 downto 0) :="00";
 
 
 -- componente debouncing
@@ -44,30 +44,30 @@ component debouncing
 -- inicia la arquitectura
 begin
 --antirebote  kclck
-deb1:  debouncing
-	GENERIC MAP (
-		COUNT_MAX => 19,
-		COUNT_WIDTH => 5
-		)
-	PORT MAP(
-		clk => clk,
-		I => kclk,
-		O => kclkf
-	);
+--deb1:  debouncing
+--	GENERIC MAP (
+--		COUNT_MAX => 10,
+--		COUNT_WIDTH => 5
+--		)
+--	PORT MAP(
+--		clk => clk,
+--		I => kclk,
+--		O => kclkf
+--	);
 	
-deb2:  debouncing
-        GENERIC MAP (
-            COUNT_MAX => 19,
-            COUNT_WIDTH => 5
-            )
-        PORT MAP(
-            clk => clk,
-            I => kdata,
-            O => kdataf
-        );
+--deb2:  debouncing
+--  GENERIC MAP (
+--      COUNT_MAX => 10,
+--      COUNT_WIDTH => 5
+--      )
+--  PORT MAP(
+--      clk => clk,
+--      I => kdata,
+--      O => kdataf
+--  );
 
 
-
+   kdataf<=kdata; -- solo para simulacion
 --proceso para leer los datos detectado activado por el reloj del teclado
 process(kclk)   
    begin
@@ -97,20 +97,22 @@ process(kclk)
 
 process(clk)
   begin
-    flag_x<= '0';
-
     if(falling_edge(clk)) then
-        if(flag = '1' and contar = '0') then
-  --           keycode <= dataprev & datacur;
-         keycode <= datacur;
-         flag_x <= '1';
-         --dataprev <= datacur;
-         contar<= '1';
-        elsif (flag = '0') then
-            contar<= '0';
-            flag_x<= '0';
+        if(flag = '1' and  pflag = '0') then
+--           keycode <= dataprev & datacur;
+            
+             keycode <= datacur;
+            if(contar<"10") then
+              flag_x <= '1';
+              contar<= contar+'1';
+            else
+               flag_x <= '0';
+            end if;
+             --dataprev <= datacur;
         else
-            flag_x <= '0';
+             flag_x <= '0';
+             pflag <= flag;
+             contar <= "00";
         end if;
         
      end if;

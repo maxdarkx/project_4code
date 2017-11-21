@@ -14,18 +14,17 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t-cpg236'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7280 
+INFO: Helper process launched with PID 11712 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 299.574 ; gain = 78.273
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 299.879 ; gain = 78.730
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'machine' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:29]
-WARNING: [Synth 8-614] signal 'cnt' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:104]
-WARNING: [Synth 8-614] signal 'clk1hz' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:104]
-WARNING: [Synth 8-614] signal 'clk1hz' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:114]
-INFO: [Synth 8-3491] module 'vga_ctrl_640x480_60Hz' declared at 'C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/vga_ctrl_640x480_60Hz.vhd:71' bound to instance 'vgacontroller' of component 'vga_ctrl_640x480_60hz' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:126]
+INFO: [Synth 8-638] synthesizing module 'machine' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:30]
+WARNING: [Synth 8-614] signal 'clk100hz' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:107]
+WARNING: [Synth 8-614] signal 'clk100hz' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:118]
+INFO: [Synth 8-3491] module 'vga_ctrl_640x480_60Hz' declared at 'C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/vga_ctrl_640x480_60Hz.vhd:71' bound to instance 'vgacontroller' of component 'vga_ctrl_640x480_60hz' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:130]
 INFO: [Synth 8-638] synthesizing module 'vga_ctrl_640x480_60Hz' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/vga_ctrl_640x480_60Hz.vhd:85]
 INFO: [Synth 8-256] done synthesizing module 'vga_ctrl_640x480_60Hz' (1#1) [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/vga_ctrl_640x480_60Hz.vhd:85]
-INFO: [Synth 8-3491] module 'PS2Receiver' declared at 'C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/PS2Receiver.vhd:13' bound to instance 'keboardin' of component 'PS2Receiver' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:140]
+INFO: [Synth 8-3491] module 'PS2Receiver' declared at 'C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/PS2Receiver.vhd:13' bound to instance 'keboardin' of component 'PS2Receiver' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:144]
 INFO: [Synth 8-638] synthesizing module 'PS2Receiver' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/PS2Receiver.vhd:23]
 	Parameter COUNT_MAX bound to: 19 - type: integer 
 	Parameter COUNT_WIDTH bound to: 5 - type: integer 
@@ -38,8 +37,8 @@ INFO: [Synth 8-256] done synthesizing module 'debouncing' (2#1) [C:/Users/Juan C
 	Parameter COUNT_WIDTH bound to: 5 - type: integer 
 INFO: [Synth 8-3491] module 'debouncing' declared at 'C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/debounce.vhd:13' bound to instance 'deb2' of component 'debouncing' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/PS2Receiver.vhd:58]
 INFO: [Synth 8-256] done synthesizing module 'PS2Receiver' (3#1) [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/PS2Receiver.vhd:23]
-INFO: [Synth 8-3491] module 'states_machine' declared at 'C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:36' bound to instance 'states_machine1' of component 'states_machine' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:149]
-INFO: [Synth 8-638] synthesizing module 'states_machine' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:77]
+INFO: [Synth 8-3491] module 'states_machine' declared at 'C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:36' bound to instance 'states_machine1' of component 'states_machine' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'states_machine' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:79]
 	Parameter user11 bound to: 8'b01000101 
 	Parameter user12 bound to: 8'b01000101 
 	Parameter user13 bound to: 8'b00010110 
@@ -56,41 +55,40 @@ INFO: [Synth 8-638] synthesizing module 'states_machine' [C:/Users/Juan Carlos/D
 	Parameter code22 bound to: 8'b01000101 
 	Parameter code23 bound to: 8'b00010110 
 	Parameter code24 bound to: 8'b00011110 
-WARNING: [Synth 8-614] signal 'vcount' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:102]
-WARNING: [Synth 8-614] signal 'data11' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:102]
-WARNING: [Synth 8-614] signal 'data12' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:102]
-WARNING: [Synth 8-614] signal 'data13' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:102]
-WARNING: [Synth 8-614] signal 'data14' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:102]
-WARNING: [Synth 8-614] signal 'data21' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:102]
-WARNING: [Synth 8-614] signal 'data22' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:102]
-WARNING: [Synth 8-614] signal 'data23' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:102]
-WARNING: [Synth 8-614] signal 'data24' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:102]
-WARNING: [Synth 8-614] signal 'keycode' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:179]
-WARNING: [Synth 8-614] signal 'data11' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:179]
-WARNING: [Synth 8-614] signal 'data12' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:179]
-WARNING: [Synth 8-614] signal 'data13' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:179]
-WARNING: [Synth 8-614] signal 'data14' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:179]
-WARNING: [Synth 8-614] signal 'data21' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:179]
-WARNING: [Synth 8-614] signal 'data22' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:179]
-WARNING: [Synth 8-614] signal 'data23' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:179]
-WARNING: [Synth 8-614] signal 'data24' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:179]
+WARNING: [Synth 8-614] signal 'vcount' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:109]
+WARNING: [Synth 8-614] signal 'data11' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:109]
+WARNING: [Synth 8-614] signal 'data12' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:109]
+WARNING: [Synth 8-614] signal 'data13' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:109]
+WARNING: [Synth 8-614] signal 'data14' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:109]
+WARNING: [Synth 8-614] signal 'data21' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:109]
+WARNING: [Synth 8-614] signal 'data22' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:109]
+WARNING: [Synth 8-614] signal 'data23' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:109]
+WARNING: [Synth 8-614] signal 'data24' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:109]
+WARNING: [Synth 8-614] signal 'rst' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:173]
+WARNING: [Synth 8-614] signal 'state_p' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:203]
+WARNING: [Synth 8-614] signal 'keycode' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:203]
+WARNING: [Synth 8-614] signal 'data11' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:203]
+WARNING: [Synth 8-614] signal 'data12' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:203]
+WARNING: [Synth 8-614] signal 'data13' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:203]
+WARNING: [Synth 8-614] signal 'data14' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:203]
+WARNING: [Synth 8-614] signal 'keycode' is read in the process but is not in the sensitivity list [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:298]
 WARNING: [Synth 8-6014] Unused sequential element px2_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element px20_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element px21_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element px22_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element px23_reg was removed. 
 WARNING: [Synth 8-6014] Unused sequential element px201_reg was removed. 
-WARNING: [Synth 8-6014] Unused sequential element px1_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:108]
-WARNING: [Synth 8-6014] Unused sequential element py1_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:109]
-WARNING: [Synth 8-6014] Unused sequential element py2_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:111]
-WARNING: [Synth 8-6014] Unused sequential element py3_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:112]
-WARNING: [Synth 8-6014] Unused sequential element px10_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:115]
-WARNING: [Synth 8-6014] Unused sequential element px11_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:116]
-WARNING: [Synth 8-6014] Unused sequential element px12_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:117]
-WARNING: [Synth 8-6014] Unused sequential element px13_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:118]
-WARNING: [Synth 8-6014] Unused sequential element px101_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:119]
-INFO: [Synth 8-256] done synthesizing module 'states_machine' (4#1) [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:77]
-INFO: [Synth 8-3491] module 'display_34' declared at 'C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/display_34.vhd:37' bound to instance 'display' of component 'display_34' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:163]
+WARNING: [Synth 8-6014] Unused sequential element px1_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element py1_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:116]
+WARNING: [Synth 8-6014] Unused sequential element py2_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:118]
+WARNING: [Synth 8-6014] Unused sequential element py3_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:119]
+WARNING: [Synth 8-6014] Unused sequential element px10_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:122]
+WARNING: [Synth 8-6014] Unused sequential element px11_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:123]
+WARNING: [Synth 8-6014] Unused sequential element px12_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:124]
+WARNING: [Synth 8-6014] Unused sequential element px13_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:125]
+WARNING: [Synth 8-6014] Unused sequential element px101_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'states_machine' (4#1) [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:79]
+INFO: [Synth 8-3491] module 'display_34' declared at 'C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/display_34.vhd:37' bound to instance 'display' of component 'display_34' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:169]
 INFO: [Synth 8-638] synthesizing module 'display_34' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/display_34.vhd:56]
 	Parameter lw bound to: 10 - type: integer 
 	Parameter dl bound to: 50 - type: integer 
@@ -180,9 +178,10 @@ WARNING: [Synth 8-6014] Unused sequential element sd31_reg was removed.  [C:/Use
 WARNING: [Synth 8-6014] Unused sequential element sd31d_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/display_34.vhd:450]
 WARNING: [Synth 8-6014] Unused sequential element sd31u_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/display_34.vhd:451]
 INFO: [Synth 8-256] done synthesizing module 'display_34' (6#1) [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/display_34.vhd:56]
-INFO: [Synth 8-256] done synthesizing module 'machine' (7#1) [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'machine' (7#1) [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:30]
+WARNING: [Synth 8-3331] design states_machine has unconnected port clk
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 341.656 ; gain = 120.355
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 339.957 ; gain = 118.809
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -192,7 +191,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 341.656 ; gain = 120.355
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 339.957 ; gain = 118.809
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -208,30 +207,38 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 649.629 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 648.934 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 649.629 ; gain = 428.328
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 648.934 ; gain = 427.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 649.629 ; gain = 428.328
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 648.934 ; gain = 427.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 649.629 ; gain = 428.328
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 648.934 ; gain = 427.785
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element hcounter_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/vga_ctrl_640x480_60Hz.vhd:126]
 WARNING: [Synth 8-6014] Unused sequential element vcounter_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/vga_ctrl_640x480_60Hz.vhd:127]
 WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/debounce.vhd:31]
 WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/PS2Receiver.vhd:75]
 INFO: [Synth 8-802] inferred FSM for state register 'state_p_reg' in module 'states_machine'
-WARNING: [Synth 8-6014] Unused sequential element state_p_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:170]
-WARNING: [Synth 8-6014] Unused sequential element state_f_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:172]
+WARNING: [Synth 8-6014] Unused sequential element state_p_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:176]
+INFO: [Synth 8-5587] ROM size for "led" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "data24" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data23" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data22" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data21" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data14" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data13" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data12" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "data11" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "state_f" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state_f" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/display_34.vhd:383]
@@ -248,43 +255,50 @@ INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to lo
 INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/display_34.vhd:433]
 INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/display_34.vhd:434]
 INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/display_34.vhd:433]
-WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:107]
-WARNING: [Synth 8-327] inferring latch for variable 'value_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:127]
-WARNING: [Synth 8-327] inferring latch for variable 'posx_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:126]
-WARNING: [Synth 8-327] inferring latch for variable 'posy_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:123]
-WARNING: [Synth 8-327] inferring latch for variable 'data24_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:238]
-WARNING: [Synth 8-6014] Unused sequential element state_p_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:170]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:110]
+WARNING: [Synth 8-6014] Unused sequential element state_p_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:176]
+WARNING: [Synth 8-6014] Unused sequential element state_p_reg was removed.  [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:176]
 INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-327] inferring latch for variable 'state_f_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:172]
-WARNING: [Synth 8-327] inferring latch for variable 'state_f_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:172]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                      s0 |                             0000 |                             0000
-                      s1 |                             0001 |                             0001
-                      s2 |                             0010 |                             0010
-                      s3 |                             0011 |                             0011
-                      s4 |                             0100 |                             0100
-                      s5 |                             0101 |                             0101
-                      s6 |                             0110 |                             0110
-                      s7 |                             0111 |                             0111
-                      s8 |                             1000 |                             1000
-                      s9 |                             1001 |                             1001
-                  iSTATE |                             1010 |                             1010
+                      s0 |                            00000 |                            00000
+                      s1 |                            00001 |                            00001
+                      s2 |                            00010 |                            00010
+                      s3 |                            00011 |                            00011
+                      s4 |                            00100 |                            00100
+                      s5 |                            00101 |                            00101
+                      s6 |                            00110 |                            00110
+                      s7 |                            00111 |                            00111
+                      s8 |                            01000 |                            01000
+                      s9 |                            01001 |                            01001
+                     s10 |                            01010 |                            01010
+                     s11 |                            01011 |                            01011
+                     s12 |                            01100 |                            01100
+                     s13 |                            01101 |                            01101
+                     s14 |                            01110 |                            01110
+                     s15 |                            01111 |                            01111
+                     s16 |                            10000 |                            10000
+                     s17 |                            10001 |                            10001
+                     s18 |                            10010 |                            10010
+                  iSTATE |                            10011 |                            10011
 *
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_p_reg' using encoding 'sequential' in module 'states_machine'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_state_f_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:172]
-WARNING: [Synth 8-327] inferring latch for variable 'data23_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:233]
-WARNING: [Synth 8-327] inferring latch for variable 'data22_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:228]
-WARNING: [Synth 8-327] inferring latch for variable 'data21_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:223]
-WARNING: [Synth 8-327] inferring latch for variable 'data14_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:204]
-WARNING: [Synth 8-327] inferring latch for variable 'data13_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:198]
-WARNING: [Synth 8-327] inferring latch for variable 'data12_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:192]
-WARNING: [Synth 8-327] inferring latch for variable 'data11_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:186]
-WARNING: [Synth 8-327] inferring latch for variable 'clk1hz_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:110]
+WARNING: [Synth 8-327] inferring latch for variable 'value_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:134]
+WARNING: [Synth 8-327] inferring latch for variable 'posx_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:133]
+WARNING: [Synth 8-327] inferring latch for variable 'posy_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:130]
+WARNING: [Synth 8-327] inferring latch for variable 'data12_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:303]
+WARNING: [Synth 8-327] inferring latch for variable 'data13_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:304]
+WARNING: [Synth 8-327] inferring latch for variable 'data11_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:302]
+WARNING: [Synth 8-327] inferring latch for variable 'data14_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:305]
+WARNING: [Synth 8-327] inferring latch for variable 'data24_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:310]
+WARNING: [Synth 8-327] inferring latch for variable 'data23_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:309]
+WARNING: [Synth 8-327] inferring latch for variable 'data22_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:308]
+WARNING: [Synth 8-327] inferring latch for variable 'data21_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/states_machine.vhd:307]
+WARNING: [Synth 8-327] inferring latch for variable 'clk100hz_reg' [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/machine.vhd:113]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 649.629 ; gain = 428.328
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 648.934 ; gain = 427.785
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -293,10 +307,10 @@ Report RTL Partitions:
 +------+----------------+------------+----------+
 |1     |display_34__GB0 |           1|     17108|
 |2     |display_34__GB1 |           1|      8481|
-|3     |display_34__GB2 |           1|     10877|
+|3     |display_34__GB2 |           1|     10845|
 |4     |display_34__GB3 |           1|     15463|
 |5     |display_34__GB4 |           1|     12444|
-|6     |machine__GC0    |           1|      1920|
+|6     |machine__GC0    |           1|      1879|
 +------+----------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -327,14 +341,15 @@ Detailed RTL Component Info :
 	   2 Input     12 Bit        Muxes := 10    
 	   2 Input     11 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 1     
+	  20 Input      8 Bit        Muxes := 1     
+	  10 Input      8 Bit        Muxes := 8     
 	   2 Input      8 Bit        Muxes := 7     
-	  11 Input      8 Bit        Muxes := 8     
-	  11 Input      4 Bit        Muxes := 1     
-	  15 Input      4 Bit        Muxes := 1     
+	  24 Input      5 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 25    
 	  18 Input      1 Bit        Muxes := 1     
 	  12 Input      1 Bit        Muxes := 2     
-	  11 Input      1 Bit        Muxes := 9     
+	  20 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -407,12 +422,13 @@ Detailed RTL Component Info :
 	   2 Input     12 Bit        Muxes := 1     
 	   2 Input     11 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 1     
+	  20 Input      8 Bit        Muxes := 1     
+	  10 Input      8 Bit        Muxes := 8     
 	   2 Input      8 Bit        Muxes := 7     
-	  11 Input      8 Bit        Muxes := 8     
-	  11 Input      4 Bit        Muxes := 1     
-	  15 Input      4 Bit        Muxes := 1     
+	  24 Input      5 Bit        Muxes := 1     
+	  20 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 8     
 	   2 Input      1 Bit        Muxes := 8     
-	  11 Input      1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -428,6 +444,7 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.srcs/sources_1/new/display_34.vhd:433]
 INFO: [Synth 8-3886] merging instance 'i_5/states_machine1/posy_reg[0]' (LDC) to 'i_5/states_machine1/posy_reg[31]'
 INFO: [Synth 8-3886] merging instance 'i_5/states_machine1/posy_reg[1]' (LDP) to 'i_5/states_machine1/posy_reg[7]'
@@ -497,7 +514,21 @@ INFO: [Synth 8-3886] merging instance 'i_5/vgacontroller/rgb_out_reg[8]' (FDR) t
 INFO: [Synth 8-3886] merging instance 'i_5/vgacontroller/rgb_out_reg[9]' (FDR) to 'i_5/vgacontroller/rgb_out_reg[11]'
 INFO: [Synth 8-3886] merging instance 'i_5/vgacontroller/rgb_out_reg[10]' (FDR) to 'i_5/vgacontroller/rgb_out_reg[11]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 649.629 ; gain = 428.328
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 648.934 ; gain = 427.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+---------------------+---------------+----------------+
+|Module Name | RTL Object          | Depth x Width | Implemented As | 
++------------+---------------------+---------------+----------------+
+|machine     | states_machine1/led | 32x8          | LUT            | 
++------------+---------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -506,22 +537,22 @@ Report RTL Partitions:
 +------+----------------+------------+----------+
 |1     |display_34__GB0 |           1|      7896|
 |2     |display_34__GB1 |           1|      4585|
-|3     |display_34__GB2 |           1|      5415|
+|3     |display_34__GB2 |           1|      4753|
 |4     |display_34__GB3 |           1|      7317|
 |5     |display_34__GB4 |           1|      6832|
-|6     |machine__GC0    |           1|       850|
+|6     |machine__GC0    |           1|       843|
 +------+----------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 652.047 ; gain = 430.746
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 648.934 ; gain = 427.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 672.207 ; gain = 450.906
+Finished Timing Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 665.199 ; gain = 444.051
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -530,16 +561,16 @@ Report RTL Partitions:
 +------+----------------+------------+----------+
 |1     |display_34__GB0 |           1|      7244|
 |2     |display_34__GB1 |           1|      4585|
-|3     |display_34__GB2 |           1|      5389|
+|3     |display_34__GB2 |           1|      4733|
 |4     |display_34__GB3 |           1|      7317|
 |5     |display_34__GB4 |           1|      4868|
-|6     |machine__GC0    |           1|       850|
+|6     |machine__GC0    |           1|       843|
 +------+----------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 686.914 ; gain = 465.613
+Finished Technology Mapping : Time (s): cpu = 00:01:06 ; elapsed = 00:01:08 . Memory (MB): peak = 684.965 ; gain = 463.816
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -563,7 +594,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 686.914 ; gain = 465.613
+Finished IO Insertion : Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 684.965 ; gain = 463.816
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -576,7 +607,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 686.914 ; gain = 465.613
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:01:10 . Memory (MB): peak = 684.965 ; gain = 463.816
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -588,25 +619,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 686.914 ; gain = 465.613
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:10 ; elapsed = 00:01:12 . Memory (MB): peak = 684.965 ; gain = 463.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 686.914 ; gain = 465.613
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 684.965 ; gain = 463.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 686.914 ; gain = 465.613
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:15 ; elapsed = 00:01:16 . Memory (MB): peak = 684.965 ; gain = 463.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 686.914 ; gain = 465.613
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:15 ; elapsed = 00:01:16 . Memory (MB): peak = 684.965 ; gain = 463.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -622,52 +653,53 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     2|
-|2     |CARRY4 |  3816|
-|3     |LUT1   |  1433|
-|4     |LUT2   |  1073|
-|5     |LUT3   |  7898|
-|6     |LUT4   |  3911|
-|7     |LUT5   |   705|
-|8     |LUT6   |   144|
-|9     |MUXF7  |     2|
-|10    |FDRE   |   103|
-|11    |LD     |    83|
-|12    |LDC    |     1|
-|13    |IBUF   |     4|
-|14    |OBUF   |    22|
+|1     |BUFG   |     3|
+|2     |CARRY4 |  3764|
+|3     |LUT1   |  1333|
+|4     |LUT2   |  1043|
+|5     |LUT3   |  7868|
+|6     |LUT4   |  3825|
+|7     |LUT5   |   679|
+|8     |LUT6   |   149|
+|9     |MUXF7  |    14|
+|10    |FDCE   |    37|
+|11    |FDRE   |    67|
+|12    |LD     |    79|
+|13    |LDC    |     1|
+|14    |IBUF   |     4|
+|15    |OBUF   |    30|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+------------------+----------------------+------+
 |      |Instance          |Module                |Cells |
 +------+------------------+----------------------+------+
-|1     |top               |                      | 19197|
-|2     |  keboardin       |PS2Receiver           |    75|
+|1     |top               |                      | 18896|
+|2     |  keboardin       |PS2Receiver           |    55|
 |3     |    deb2          |debouncing            |    24|
-|4     |  states_machine1 |states_machine        | 15668|
-|5     |  vgacontroller   |vga_ctrl_640x480_60Hz |  1765|
+|4     |  states_machine1 |states_machine        | 15613|
+|5     |  vgacontroller   |vga_ctrl_640x480_60Hz |  1696|
 +------+------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 686.914 ; gain = 465.613
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:15 ; elapsed = 00:01:16 . Memory (MB): peak = 684.965 ; gain = 463.816
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 34 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:09 . Memory (MB): peak = 686.914 ; gain = 157.641
-Synthesis Optimization Complete : Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 686.914 ; gain = 465.613
+Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:00 ; elapsed = 00:01:08 . Memory (MB): peak = 684.965 ; gain = 154.840
+Synthesis Optimization Complete : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 684.965 ; gain = 463.816
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 3904 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-17] Analyzing 3848 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'machine' is not ideal for floorplanning, since the cellview 'states_machine' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 84 instances were transformed.
-  LD => LDCE: 83 instances
+  A total of 80 instances were transformed.
+  LD => LDCE: 79 instances
   LDC => LDCE: 1 instances
 
-119 Infos, 141 Warnings, 0 Critical Warnings and 0 Errors encountered.
+129 Infos, 137 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:24 ; elapsed = 00:01:26 . Memory (MB): peak = 692.176 ; gain = 472.168
+synth_design: Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 689.414 ; gain = 469.422
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Juan Carlos/Documents/Vivado/project_4code/project_4code.runs/synth_1/machine.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.165 . Memory (MB): peak = 692.176 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Nov  8 18:26:44 2017...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.152 . Memory (MB): peak = 689.414 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 17 20:11:11 2017...
